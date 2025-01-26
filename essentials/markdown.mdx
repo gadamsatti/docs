@@ -1,88 +1,83 @@
 ---
-title: 'Markdown Syntax'
-description: 'Text, title, and styling in standard markdown'
-icon: 'text-size'
+title: "Content Guidelines"
+description: "Guidelines for writing EpicMarket documentation"
+icon: "text-size"
 ---
 
-## Titles
+## Writing Style
 
-Best used for section headers.
+When documenting EpicMarket features, follow these guidelines:
 
-```md
-## Titles
-```
+### Headers
 
-### Subtitles
-
-Best use to subsection headers.
+Use headers to organize content hierarchically:
 
 ```md
-### Subtitles
+## Major Sections
+
+### Subsections
+
+#### Detailed Points
 ```
 
-<Tip>
+### Formatting
 
-Each **title** and **subtitle** creates an anchor and also shows up on the table of contents on the right.
+Use markdown formatting to enhance readability:
 
-</Tip>
+| Style  | Syntax        | Example                                       |
+| ------ | ------------- | --------------------------------------------- |
+| Bold   | `**text**`    | **Important note**                            |
+| Italic | `*text*`      | _Additional info_                             |
+| Code   | `` `code` ``  | `apiKey`                                      |
+| Links  | `[text](url)` | [Dashboard](https://dashboard.epicmarket.com) |
 
-## Text Formatting
+### Code Examples
 
-We support most markdown formatting. Simply add `**`, `_`, or `~` around text to format it.
+Include clear code examples with language specification:
 
-| Style         | How to write it   | Result          |
-| ------------- | ----------------- | --------------- |
-| Bold          | `**bold**`        | **bold**        |
-| Italic        | `_italic_`        | _italic_        |
-| Strikethrough | `~strikethrough~` | ~strikethrough~ |
+```javascript
+// Initialize EpicMarket SDK
+const epicMarket = new EpicMarket({
+  apiKey: "YOUR_API_KEY",
+});
+```
 
-You can combine these. For example, write `**_bold and italic_**` to get **_bold and italic_** text.
+### Callouts
 
-You need to use HTML to write superscript and subscript text. That is, add `<sup>` or `<sub>` around your text.
+Use callouts to highlight important information:
 
-| Text Size   | How to write it          | Result                 |
-| ----------- | ------------------------ | ---------------------- |
-| Superscript | `<sup>superscript</sup>` | <sup>superscript</sup> |
-| Subscript   | `<sub>subscript</sub>`   | <sub>subscript</sub>   |
+<Note>Important information about using EpicMarket features.</Note>
 
-## Linking to Pages
+<Warning>Critical warnings about potential issues or requirements.</Warning>
 
-You can add a link by wrapping text in `[]()`. You would write `[link to google](https://google.com)` to [link to google](https://google.com).
+<Tip>Helpful tips for getting the most out of EpicMarket.</Tip>
 
-Links to pages in your docs need to be root-relative. Basically, you should include the entire folder path. For example, `[link to text](/writing-content/text)` links to the page "Text" in our components section.
+### Lists
 
-Relative links like `[link to text](../text)` will open slower because we cannot optimize them as easily.
+Organize information in lists:
 
-## Blockquotes
+- Unordered lists for general points
+- Ordered lists for sequential steps
+  1. First step
+  2. Second step
+  3. Third step
 
-### Singleline
+### Tables
 
-To create a blockquote, add a `>` in front of a paragraph.
+Use tables to compare features or display structured data:
 
-> Dorothy followed her through many of the beautiful rooms in her castle.
+| Plan       | Price  | Features               |
+| ---------- | ------ | ---------------------- |
+| Basic      | $10/mo | Core features          |
+| Pro        | $30/mo | Advanced features      |
+| Enterprise | Custom | All features + Support |
+
+### Images
+
+Include screenshots or diagrams when helpful:
 
 ```md
-> Dorothy followed her through many of the beautiful rooms in her castle.
+![Feature Screenshot](/images/feature.png)
 ```
 
-### Multiline
-
-> Dorothy followed her through many of the beautiful rooms in her castle.
->
-> The Witch bade her clean the pots and kettles and sweep the floor and keep the fire fed with wood.
-
-```md
-> Dorothy followed her through many of the beautiful rooms in her castle.
->
-> The Witch bade her clean the pots and kettles and sweep the floor and keep the fire fed with wood.
-```
-
-### LaTeX
-
-Mintlify supports [LaTeX](https://www.latex-project.org) through the Latex component.
-
-<Latex>8 x (vk x H1 - H2) = (0,1)</Latex>
-
-```md
-<Latex>8 x (vk x H1 - H2) = (0,1)</Latex>
-```
+<Note>Always compress images and provide alt text for accessibility.</Note>

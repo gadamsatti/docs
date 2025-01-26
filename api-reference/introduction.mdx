@@ -1,33 +1,30 @@
 ---
-title: 'Introduction'
-description: 'Example section for showcasing API endpoints'
+title: 'API Introduction'
+description: 'Integrate with EpicMarket's platform'
 ---
 
-<Note>
-  If you're not looking to build API reference documentation, you can delete
-  this section by removing the api-reference folder.
-</Note>
+## Welcome to EpicMarket API
 
-## Welcome
+Our API enables you to integrate EpicMarket's booking and discovery features into your applications. Whether you're a business looking to manage bookings or a developer building on top of our platform, our API provides the tools you need.
 
-There are two ways to build API documentation: [OpenAPI](https://mintlify.com/docs/api-playground/openapi/setup) and [MDX components](https://mintlify.com/docs/api-playground/mdx/configuration). For the starter kit, we are using the following OpenAPI specification.
+### Authentication
+
+All API endpoints are authenticated using Bearer tokens. You'll need to register your application to receive API credentials.
 
 <Card
-  title="Plant Store Endpoints"
-  icon="leaf"
-  href="https://github.com/mintlify/starter/blob/main/api-reference/openapi.json"
+  title="Get Your API Keys"
+  icon="key"
+  href="https://dashboard.epicmarket.com/api-keys"
 >
-  View the OpenAPI specification file
+  Register your application to receive API credentials
 </Card>
 
-## Authentication
+### Core Endpoints
 
-All API endpoints are authenticated using Bearer tokens and picked up from the specification file.
+Our API provides endpoints for:
 
-```json
-"security": [
-  {
-    "bearerAuth": []
-  }
-]
-```
+- Business Management
+- Booking Services
+- Order Processing
+- Customer Management
+- Analytics

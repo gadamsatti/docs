@@ -1,106 +1,103 @@
 ---
-title: 'Development'
-description: 'Preview changes locally to update your docs'
+title: "Development"
+description: "Integrate EpicMarket into your application"
 ---
 
 <Info>
-  **Prerequisite**: Please install Node.js (version 19 or higher) before proceeding.
+  **Prerequisite**: You'll need an EpicMarket API key to get started. [Register
+  your application](https://dashboard.epicmarket.com/api-keys) to receive your
+  credentials.
 </Info>
 
-Follow these steps to install and run Mintlify on your operating system:
+## Integration Options
 
-**Step 1**: Install Mintlify:
+EpicMarket offers multiple ways to integrate with our platform:
+
+### 1. REST API
+
+Our REST API provides comprehensive access to EpicMarket's features:
+
+```bash
+# Example API request
+curl -X GET "https://api.epicmarket.com/v1/businesses" \
+  -H "Authorization: Bearer YOUR_API_KEY"
+```
+
+### 2. Mobile SDKs
 
 <CodeGroup>
 
-  ```bash npm
-  npm i -g mintlify
-  ```
+```bash iOS
+# Install via CocoaPods
+pod 'EpicMarketSDK'
+```
 
-```bash yarn
-yarn global add mintlify
+```bash Android
+// Add to your build.gradle
+implementation 'com.epicmarket:sdk:1.0.0'
 ```
 
 </CodeGroup>
 
-**Step 2**: Navigate to the docs directory (where the `mint.json` file is located) and execute the following command:
+### 3. Web Components
+
+Embed EpicMarket features directly in your website:
+
+```html
+<script src="https://cdn.epicmarket.com/web-components.js"></script>
+<epic-market-booking business-id="YOUR_BUSINESS_ID"></epic-market-booking>
+```
+
+## Authentication
+
+All API requests require authentication using Bearer tokens:
 
 ```bash
-mintlify dev
+Authorization: Bearer YOUR_API_KEY
 ```
 
-A local preview of your documentation will be available at `http://localhost:3000`.
+## Rate Limits
 
-### Custom Ports
+- 1000 requests per minute for standard accounts
+- 5000 requests per minute for premium accounts
+- Contact us for custom limits
 
-By default, Mintlify uses port 3000. You can customize the port Mintlify runs on by using the `--port` flag. To run Mintlify on port 3333, for instance, use this command:
+<Note>
+  Exceeding rate limits will result in a 429 Too Many Requests response.
+</Note>
+
+## Testing
+
+Use our sandbox environment for testing:
 
 ```bash
-mintlify dev --port 3333
+https://sandbox-api.epicmarket.com/v1/
 ```
 
-If you attempt to run Mintlify on a port that's already in use, it will use the next available port:
+Test API keys begin with `test_`.
 
-```md
-Port 3000 is already in use. Trying 3001 instead.
-```
+## Webhooks
 
-## Mintlify Versions
+Configure webhooks to receive real-time updates:
 
-Please note that each CLI release is associated with a specific version of Mintlify. If your local website doesn't align with the production version, please update the CLI:
+1. Go to your [dashboard settings](https://dashboard.epicmarket.com/settings/webhooks)
+2. Add a webhook endpoint
+3. Select events to monitor
+4. Save your configuration
 
-<CodeGroup>
+## Support
 
-```bash npm
-npm i -g mintlify@latest
-```
+Need help with integration?
 
-```bash yarn
-yarn global upgrade mintlify
-```
-
-</CodeGroup>
-
-## Validating Links
-
-The CLI can assist with validating reference links made in your documentation. To identify any broken links, use the following command:
-
-```bash
-mintlify broken-links
-```
-
-## Deployment
-
-<Tip>
-  Unlimited editors available under the [Pro
-  Plan](https://mintlify.com/pricing) and above.
-</Tip>
-
-If the deployment is successful, you should see the following:
-
-<Frame>
-  <img src="/images/checks-passed.png" style={{ borderRadius: '0.5rem' }} />
-</Frame>
-
-## Code Formatting
-
-We suggest using extensions on your IDE to recognize and format MDX. If you're a VSCode user, consider the [MDX VSCode extension](https://marketplace.visualstudio.com/items?itemName=unifiedjs.vscode-mdx) for syntax highlighting, and [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) for code formatting.
-
-## Troubleshooting
-
-<AccordionGroup>
-  <Accordion title='Error: Could not load the "sharp" module using the darwin-arm64 runtime'>
-
-    This may be due to an outdated version of node. Try the following:
-    1. Remove the currently-installed version of mintlify: `npm remove -g mintlify`
-    2. Upgrade to Node v19 or higher.
-    3. Reinstall mintlify: `npm install -g mintlify`
-  </Accordion>
-
-  <Accordion title="Issue: Encountering an unknown error">
-  
-    Solution: Go to the root of your device and delete the \~/.mintlify folder. Afterwards, run `mintlify dev` again.
-  </Accordion>
-</AccordionGroup>
-
-Curious about what changed in the CLI version? [Check out the CLI changelog.](https://www.npmjs.com/package/mintlify?activeTab=versions)
+<CardGroup>
+  <Card title="API Reference" icon="code" href="/api-reference">
+    Detailed API documentation
+  </Card>
+  <Card
+    title="Developer Forum"
+    icon="messages"
+    href="https://developers.epicmarket.com/forum"
+  >
+    Connect with other developers
+  </Card>
+</CardGroup>

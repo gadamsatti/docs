@@ -1,66 +1,87 @@
 ---
-title: 'Navigation'
-description: 'The navigation field in mint.json defines the pages that go in the navigation menu'
-icon: 'map'
+title: "Navigation"
+description: "Structure of the EpicMarket documentation"
+icon: "map"
 ---
 
-The navigation menu is the list of links on every website.
+## Documentation Structure
 
-You will likely update `mint.json` every time you add a new page. Pages do not show up automatically.
+Our documentation is organized into the following sections:
 
-## Navigation syntax
+### Getting Started
 
-Our navigation syntax is recursive which means you can make nested navigation groups. You don't need to include `.mdx` in page names.
+- Introduction to EpicMarket
+- Quickstart guide
+- Platform overview
 
-<CodeGroup>
+### Business Guide
 
-```json Regular Navigation
-"navigation": [
+- Setting up your business
+- Managing your storefront
+- Handling bookings
+- Analytics and reporting
+
+### Customer Guide
+
+- Using the mobile app
+- Finding businesses
+- Making bookings
+- Payment methods
+
+### API Reference
+
+- Authentication
+- Endpoints
+- Webhooks
+- SDKs
+
+## Navigation Example
+
+Here's how to structure your navigation in `mint.json`:
+
+```json
+{
+  "navigation": [
     {
-        "group": "Getting Started",
-        "pages": ["quickstart"]
+      "group": "Getting Started",
+      "pages": ["introduction", "quickstart"]
+    },
+    {
+      "group": "Business Guide",
+      "pages": [
+        "business/setup",
+        "business/storefront",
+        "business/bookings",
+        "business/analytics"
+      ]
+    },
+    {
+      "group": "Customer Guide",
+      "pages": [
+        "customer/mobile-app",
+        "customer/discovery",
+        "customer/bookings",
+        "customer/payments"
+      ]
+    },
+    {
+      "group": "API Reference",
+      "pages": [
+        "api-reference/introduction",
+        {
+          "group": "Endpoints",
+          "pages": [
+            "api-reference/endpoint/create",
+            "api-reference/endpoint/get",
+            "api-reference/endpoint/delete"
+          ]
+        }
+      ]
     }
-]
+  ]
+}
 ```
 
-```json Nested Navigation
-"navigation": [
-    {
-        "group": "Getting Started",
-        "pages": [
-            "quickstart",
-            {
-                "group": "Nested Reference Pages",
-                "pages": ["nested-reference-page"]
-            }
-        ]
-    }
-]
-```
-
-</CodeGroup>
-
-## Folders
-
-Simply put your MDX files in folders and update the paths in `mint.json`.
-
-For example, to have a page at `https://yoursite.com/your-folder/your-page` you would make a folder called `your-folder` containing an MDX file called `your-page.mdx`.
-
-<Warning>
-
-You cannot use `api` for the name of a folder unless you nest it inside another folder. Mintlify uses Next.js which reserves the top-level `api` folder for internal server calls. A folder name such as `api-reference` would be accepted.
-
-</Warning>
-
-```json Navigation With Folder
-"navigation": [
-    {
-        "group": "Group Name",
-        "pages": ["your-folder/your-page"]
-    }
-]
-```
-
-## Hidden Pages
-
-MDX files not included in `mint.json` will not show up in the sidebar but are accessible through the search bar and by linking directly to them.
+<Note>
+  Make sure all referenced pages exist in your documentation folder structure.
+</Note>
