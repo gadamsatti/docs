@@ -1,0 +1,84 @@
+---
+title: 'Manage Orders'
+description: 'Track and manage customer orders efficiently with our intuitive order management interface'
+---
+<Tip>
+  The Manage Orders interface provides real-time visibility into order status, customer details, and transaction information.
+</Tip>
+## Overview
+The Manage Orders page offers a comprehensive view of all customer orders in a responsive table format. Monitor order statuses, track deliveries, and manage customer transactions all in one place.
+<Frame>
+  <img src="/images/manage-orders.png" alt="Manage Orders Interface" />
+</Frame>
+## Key Features
+<CardGroup cols={2}>
+  <Card title="Order Tracking" icon="table">
+    View detailed order information including IDs, customer names, and statuses in a clean, organized table layout
+  </Card>
+  <Card title="Smart Search" icon="magnifying-glass">
+    Quickly locate specific orders using the intelligent search functionality
+  </Card>
+  <Card title="Sorting & Filtering" icon="filter">
+    Organize orders by any column and customize visible fields through the Columns menu
+  </Card>
+  <Card title="Dark Mode" icon="moon">
+    Enhanced visibility with dark theme support for comfortable viewing in any lighting condition
+  </Card>
+</CardGroup>
+## Table Structure
+<ParamField body="order_id" type="string">
+  Unique identifier for each order
+</ParamField>
+<ParamField body="customer_name" type="string">
+  Name of the customer who placed the order
+</ParamField>
+<ParamField body="status" type="enum">
+  Current state of the order:
+  - Order Processing
+  - Delivered
+  - Cancelled
+</ParamField>
+<ParamField body="total_price" type="number">
+  Total order value in INR (₹)
+</ParamField>
+<ParamField body="total_items" type="number">
+  Number of items in the order
+</ParamField>
+<ParamField body="order_type" type="enum">
+  - Offline
+  - Online
+</ParamField>
+## Interactive Features
+<AccordionGroup>
+  <Accordion title="Search Orders">
+    Use the search bar to filter orders by any field:
+    ```
+    Enter Order ID, Customer Name, or Status
+    ```
+  </Accordion>
+  <Accordion title="Column Customization">
+    Click the "Columns" button to:
+    - Show/hide specific columns
+    - Rearrange column order
+    - Reset to default view
+  </Accordion>
+  <Accordion title="Pagination">
+    Navigate through order pages using:
+    - Previous/Next buttons
+    - Page number selection
+    - Items per page dropdown
+  </Accordion>
+</AccordionGroup>
+## Status Indicators
+<CodeGroup>
+</CodeGroup>
+<Note>
+Status indicators use color coding for quick visual identification of order states.
+</Note>
+## Best Practices
+<Steps>
+1. Regularly monitor the "Order Processing" status for timely fulfillment
+2. Use search functionality for quick access to specific orders
+3. Verify customer details before updating order status
+4. Check total price and items count for order accuracy
+</Steps>
