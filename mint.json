@@ -50,7 +50,7 @@
   "navigation": [
     {
       "group": "Get Started",
-      "pages": ["introduction", "quickstart", "registration", "business-Details", "login","add-Branch", "manage-staff", "add-Products","manage-Orders","pos-system"]
+      "pages": ["introduction", "quickstart", "registration", "business-Details", "login","add-Branch", "manage-staff", "add-Products","manage-Orders","pos-system","contact","report-issue","business-FAQ's", "customer-FAQ's"]
     }
   ],
   "footerSocials": {
