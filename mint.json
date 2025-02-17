@@ -47,12 +47,34 @@
       "url": "https://epicmarket.in/about"
     }
   ],
+
   "navigation": [
     {
       "group": "Get Started",
-      "pages": ["introduction", "quickstart", "registration", "business-Details", "login","add-Branch", "manage-staff", "add-Products","manage-Orders","pos-system","contact","report-issue","business-FAQ's", "customer-FAQ's"]
+      "pages": ["introduction", "quickstart"]
+    },
+    {
+      "group": "Onboarding Process",
+      "pages": [
+        "registration",
+        "business-Details",
+        "login",
+        "add-Branch",
+        "manage-staff",
+        "add-Products",
+        "manage-Orders",
+        "pos-system",
+        "contact",
+        "report-issue"
+      ]
+    },
+    {
+      "group": "FAQ's",
+      "pages": ["business-FAQ's", "customer-FAQ's"]
     }
   ],
+
+
   "footerSocials": {
     "x": "https://twitter.com/EpicMarketIndia",
     "linkedin": "https://www.linkedin.com/company/epic-market/"
