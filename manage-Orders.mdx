@@ -1,6 +1,6 @@
 ---
 title: '📦 Manage Orders Guide 🛒'
-description: 'Track and manage customer orders efficiently with our intuitive order management interface'
+description: 'Track and manage customer orders efficiently with our intuitive order management interface.'
 ---
 <Tip>
   The Manage Orders interface provides real-time visibility into order status, customer details, and transaction information.
@@ -14,38 +14,39 @@ The Manage Orders page offers a comprehensive view of all customer orders in a r
 ## Key Features
 <CardGroup cols={2}>
   <Card title="Order Tracking" icon="table">
-    View detailed order information including IDs, customer names, and statuses in a clean, organized table layout
+    View detailed order information including IDs, customer names, and statuses in a clean, organized table layout.
   </Card>
   <Card title="Smart Search" icon="magnifying-glass">
-    Quickly locate specific orders using the intelligent search functionality
+    Quickly locate specific orders using the intelligent search functionality.
   </Card>
   <Card title="Sorting & Filtering" icon="filter">
-    Organize orders by any column and customize visible fields through the Columns menu
+    Organize orders by any column and customize visible fields through the Columns menu.
   </Card>
   <Card title="Dark Mode" icon="moon">
-    Enhanced visibility with dark theme support for comfortable viewing in any lighting condition
+    Enhanced visibility with dark theme support for comfortable viewing in any lighting condition.
   </Card>
 </CardGroup>
+
 ## Table Structure
-<ParamField body="order_id" type="string">
+<ParamField body="Order_id" >
   Unique identifier for each order
 </ParamField>
-<ParamField body="customer_name" type="string">
+<ParamField body="Customer_name" >
   Name of the customer who placed the order
 </ParamField>
-<ParamField body="status" type="enum">
+<ParamField body="Status">
   Current state of the order:
   - Order Processing
   - Delivered
   - Cancelled
 </ParamField>
-<ParamField body="total_price" type="number">
+<ParamField body="Total_price">
   Total order value in INR (₹)
 </ParamField>
-<ParamField body="total_items" type="number">
-  Number of items in the order
+<ParamField body="Total_items" >
+  Number of items in the order.
 </ParamField>
-<ParamField body="order_type" type="enum">
+<ParamField body="Order_type" >
   - Offline
   - Online
 </ParamField>

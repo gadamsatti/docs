@@ -1,194 +1,163 @@
 ---
-title: '💳 Modern Point of Sale (POS) System Guide 🖥️'
-description: 'A comprehensive guide to our intuitive and powerful POS system'
+title: '💳 Modern Point of Sale (POS) System🖥️'
+description: 'A comprehensive guide to our modern POS solution for seamless retail transactions'
 ---
-  <Frame>
-<img src="/images/images docs/image8.1.png" alt="image8.1.png" 
+
+# Point of Sale (POS) System
+
+> **Info:** Our POS system combines powerful inventory management with an intuitive checkout experience, helping retail businesses process transactions efficiently while collecting valuable customer data.
+<Frame>
+ <img src="/images/images docs/image8.1.png" alt="image8.1.png" 
          width="300"
        height="200" />
 </Frame>
-## Overview
+## Product Catalog Interface
 
-Transform your retail operations with our modern Point of Sale system. Designed for simplicity and efficiency, our POS system streamlines checkout processes and enhances customer experience.
+### Visual Overview
+Browse through your entire product inventory with our visually optimized catalog view. Each product is displayed with clear imagery and essential information for quick identification.
+
+<Frame>
+ <img src="/images/images docs/image8.2.png" alt="image8.2.png" 
+         width="300"
+       height="200" />
+</Frame>
+### Key Features
 
 <CardGroup cols={2}>
-  <Card title="Quick Setup" icon="rocket">
-    Get started with minimal configuration. Ready for your first sale in minutes.
+  <Card title="📸 Visual Product Cards" icon="image">
+    Each product card displays a high-quality product image, name, and price for easy browsing and selection.
   </Card>
-  <Card title="Smart Catalog" icon="grid-2">
-    Manage your product inventory with our intelligent cataloging system.
+  <Card title="🔍 Smart Search" icon="magnifying-glass">
+    Quickly find products with our intelligent search functionality that supports partial matches and category filters.
   </Card>
-  <Card title="Secure Payments" icon="shield-check">
-    Multiple payment options with enterprise-grade security.
+  <Card title="⬅️➡️ Pagination Controls" icon="arrows-left-right">
+    Navigate through your catalog with intuitive Previous and Next buttons for a seamless browsing experience.
   </Card>
-  <Card title="Order Tracking" icon="list-check">
-    Real-time order status updates and management.
+  <Card title="➕ One-Click Add" icon="plus">
+    Add products to the current order with a single click, streamlining the checkout process.
   </Card>
 </CardGroup>
 
-## Product Management
- <Frame>
-<img src="/images/images docs/image8.2.png" alt="image8.2.png" 
-         width="300"
-       height="200" />
-</Frame>
-<Tabs>
-  <Tab title="Product Cards">
-    Each product in your catalog is displayed with:
-    - High-quality product image
-    - Clear product name
-    - Prominent price display
-    - Quick-add functionality
-  </Tab>
-  <Tab title="Search Features">
-    Powerful search capabilities include:
-    - Real-time search suggestions
-    - Category filters
-    - Price range filtering
-    - Stock availability indicators
-  </Tab>
-</Tabs>
+## Checkout Workflow
 
-<Note>
-  Product images are automatically optimized for faster loading while maintaining quality.
-</Note>
-
-## Payment Processing
-
-<AccordionGroup>
-  <Accordion title="Available Payment Methods">
-    ### Supported Payment Options
-    - **Cash Payments**: Traditional cash handling with change calculation
-    - **Card Payments**: Support for major credit and debit cards
-    - **UPI Payments**: Digital payments through UPI platform
-  </Accordion>
-  
-  <Accordion title="Security Features">
-    ### Enhanced Security
-    - End-to-end encryption
-    - PCI DSS compliance
-    - Fraud detection systems
-    - Secure payment gateways
-  </Accordion>
-</AccordionGroup>
- <Frame>
-<img src="/images/images docs/image8.3.png" alt="image8.3.png" 
-         width="300"
-       height="200" />
-</Frame>
-## Order Management
+Follow our streamlined checkout process to complete transactions quickly and accurately.
 
 <Steps>
-  <Step title="Customer Information">
-    Collect essential customer details:
-    - Name
-    - Contact number
-    - Email (optional)
+  <Step title="Build the Order">
+    Select products from the catalog to add to the current order. The system automatically calculates totals and applies any relevant discounts.
+    
+    <Tip>You can also scan barcodes to add products quickly</Tip>
   </Step>
-  <Step title="Order Status">
-    Track orders through various stages:
-    - Order Placed
-    - Processing
-    - Ready for Pickup
-    - Completed
+  
+  <Step title="Review Order Summary">
+    Verify the order details, including:
+    - Total amount (e.g., ₹1,799.99)
+    - Individual items and quantities
+    - Applied discounts or promotions
   </Step>
-  <Step title="Confirmation">
-    Generate detailed order confirmation with:
-    - Order ID
-    - Transaction summary
-    - Payment details
+  
+  <Step title="Collect Customer Information">
+   <Frame>
+ <img src="/images/images docs/image8.3.png" alt="image8.3.png" 
+         width="300"
+       height="200" />
+</Frame>
+    <Warning>Customer information helps build your loyalty database and improves future marketing opportunities.</Warning>
+  </Step>
+  
+  <Step title="Select Payment Method">
+    
+      - Process traditional cash payments with automatic change calculation. 
+      - Accept credit and debit cards through integrated payment terminals.
+      - Generate dynamic QR codes for seamless UPI transactions.
+  </Step>
+  
+  <Step title="Complete Transaction">
+    <AccordionGroup>
+      <Accordion title="Finalize Order">
+        Click the "Place Order" button to complete the transaction. The system will display a success confirmation and generate a receipt.
+      </Accordion>
+      <Accordion title="Cancel Order">
+        If needed, you can cancel the current order by clicking the "Cancel" button.
+      </Accordion>
+    </AccordionGroup>
   </Step>
 </Steps>
 
- <Frame>
-<img src="/images/images docs/image8.4.png" alt="image8.4.png" 
+## Payment Options
+
+Choose from multiple payment methods to accommodate all customer preferences.
+
+<CardGroup cols={3}>
+  <Card title="💵 Cash Payments" icon="money-bill">
+    Process traditional cash transactions with automatic change calculation and drawer management.
+  </Card>
+  <Card title="💳 Card Payments" icon="credit-card">
+    Accept credit and debit cards through integrated payment terminals with instant verification.
+  </Card>
+  <Card title="📱 UPI Payments" icon="mobile">
+    Generate dynamic QR codes for seamless UPI transactions popular in the Indian market.
+  </Card>
+</CardGroup>
+
+## Order Statuses
+
+<Table>
+  <thead>
+    <tr>
+      <th>Status</th>
+      <th>Description</th>
+      <th>Next Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><Badge variant="info">Order Placed</Badge></td>
+      <td>Initial status after successful payment</td>
+      <td>Prepare order, Print receipt</td>
+    </tr>
+    <tr>
+      <td><Badge variant="warning">Processing</Badge></td>
+      <td>Order is being prepared</td>
+      <td>Package items, Verify contents</td>
+    </tr>
+    <tr>
+      <td><Badge variant="success">Completed</Badge></td>
+      <td>Order fulfilled and delivered to customer</td>
+      <td>Request feedback, Offer loyalty rewards</td>
+    </tr>
+  </tbody>
+</Table>
+<div className="overflow-x-auto">
+  <table className="min-w-full bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-md">
+    <thead className="bg-gray-100 dark:bg-gray-700">
+      <tr>
+        <th className="py-3 px-4 text-left">Status</th>
+        <th className="py-3 px-4 text-left">Description</th>
+        <th className="py-3 px-4 text-left">Next Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr className="border-b border-gray-200 dark:border-gray-700">
+        <td className="py-3 px-4"><span className="px-2 py-1 bg-blue-100 text-blue-800 rounded-full text-xs">Order Placed</span></td>
+        <td className="py-3 px-4">Initial status after successful payment</td>
+        <td className="py-3 px-4">Prepare order, Print receipt</td>
+      </tr>
+      <tr className="border-b border-gray-200 dark:border-gray-700">
+        <td className="py-3 px-4"><span className="px-2 py-1 bg-yellow-100 text-yellow-800 rounded-full text-xs">Processing</span></td>
+        <td className="py-3 px-4">Order is being prepared</td>
+        <td className="py-3 px-4">Package items, Verify contents</td>
+      </tr>
+      <tr>
+        <td className="py-3 px-4"><span className="px-2 py-1 bg-green-100 text-green-800 rounded-full text-xs">Completed</span></td>
+        <td className="py-3 px-4">Order fulfilled and delivered to customer</td>
+        <td className="py-3 px-4">Request feedback, Offer loyalty rewards</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<Frame>
+ <img src="/images/images docs/image8.4.png" alt="image8.4.png" 
          width="300"
        height="200" />
 </Frame>
-## Features Comparison
-
-<CardGroup cols={3}>
-  <Card title="Basic" icon="star">
-    - Product catalog
-    - Basic search
-    - Cash payments
-    - Simple reporting
-  </Card>
-  <Card title="Professional" icon="stars">
-    - Everything in Basic
-    - Advanced search
-    - All payment methods
-    - Customer management
-  </Card>
-  <Card title="Enterprise" icon="sparkles">
-    - Everything in Professional
-    - Custom branding
-    - API access
-    - Priority support
-  </Card>
-</CardGroup>
-
-## Integration Options
-
-<RequestExample>
-  <Frame>
-    Our POS system seamlessly integrates with your existing infrastructure:
-    - Inventory management systems
-    - Accounting software
-    - CRM platforms
-    - Analytics tools
-  </Frame>
-</RequestExample>
-
-## Best Practices
-
-<Warning>
-  Always ensure proper user permissions and regular system backups to maintain data security.
-</Warning>
-
-### Recommended Setup
-
-<CheckboxList>
-  - Configure user roles and permissions
-  - Set up payment gateway credentials
-  - Import initial product catalog
-  - Test payment processing
-  - Train staff on basic operations
-</CheckboxList>
-
-## Support Resources
-
-<CardGroup cols={2}>
-  <Card title="Documentation" icon="book">
-    Access comprehensive guides and API documentation
-  </Card>
-  <Card title="Help Center" icon="headset">
-    24/7 support through chat, email, and phone
-  </Card>
-</CardGroup>
-
-## Updates and Maintenance
-
-<Info>
-Regular system updates ensure optimal performance and security. Enable automatic updates for seamless maintenance.
-</Info>
-
-### Latest Features
-
-<CardGroup cols={3}>
-  <Card title="Smart Analytics" icon="chart-mixed">
-    Advanced reporting and insights
-  </Card>
-  <Card title="Mobile Support" icon="device-mobile">
-    Responsive design for all devices
-  </Card>
-  <Card title="Cloud Backup" icon="cloud-arrow-up">
-    Automatic data synchronization
-  </Card>
-</CardGroup>
-
----
-
-<Tip>
-Need personalized assistance? Our support team is available 24/7 to help you make the most of your POS system.
-</Tip>
