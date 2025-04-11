@@ -66,11 +66,12 @@
         "pos-system",
         "contact",
         "report-issue"
+       
       ]
     },
     {
       "group": "FAQ's",
-      "pages": ["business-FAQ's", "customer-FAQ's"]
+      "pages": ["business-FAQ's", "customer-FAQ's", "Version 0.0.1"]
     }
   ],
 
